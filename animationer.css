@@ -45,11 +45,11 @@ ved at vælge den rigtige timingfunktion! */
     transform: translate(0, -130%);
   }
 }
+
 /* animation 3: Drop:
 Find den rigtige timingfunktion, 
 og sørg for at animationen kun kører én gang, 
 men bolden bliver liggende. */
-
 .drop {
   animation-name: drop;
   animation-duration: 1s;
@@ -65,5 +65,36 @@ men bolden bliver liggende. */
 
   100% {
     transform: translate(0, 130%);
+  }
+}
+
+/* animation 4: pattern:
+Her skal du bruge flere keyframes 
+for at flytte bolden fra sted til sted til sted. 
+Sørg for at bolden rammer cirka midt 
+på boksens sider. Det kan godt vise sig lidt 
+umuligt at få en naturlig bevægelse. */
+.pattern {
+  animation-name: pattern;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pattern {
+  0% {
+    transform: translate(0%, -150%);
+  }
+  25% {
+    transform: translate(150%, 0%);
+  }
+  50% {
+    transform: translate(0%, 150%);
+  }
+  75% {
+    transform: translate(-150%, 0%);
+  }
+  100% {
+    transform: translate(0, -150%);
   }
 }
