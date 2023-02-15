@@ -233,3 +233,35 @@ uden for sig selv. Du skal kigge på hvordan
     transform: rotate(360deg) translate(140%);
   }
 }
+
+/* animation 11: glow:
+Her har rammen fået en mørkere baggrundsfarve, 
+så man bedre kan se effekten. Du skal tilføje 
+en “outer glow”-lignende effekt, ved at bruge 
+en CSS filter effekt.
+
+Se w3schools.com/cssref/css3_pr_filter for 
+information on filter-funktioner. Der er ikke 
+nogen der hedder glow, så du skal være kreativ.
+
+Husk først at prøve effekten direkte i klassen, 
+og når du har de ønskede ende-værdier, så sæt 
+dem ind i animationen. */
+.glow {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+  0% {
+    transform: translate(0, 0%);
+  }
+
+  100% {
+    transform: translate(0, 0%);
+    filter: drop-shadow(0px 0px 10px yellow);
+    /* filter: drop-shadow(h-shadow v-shadow blur color) */
+  }
+}
