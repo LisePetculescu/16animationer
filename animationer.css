@@ -28,8 +28,8 @@ Få det til at se så naturligt ud som muligt,
 ved at vælge den rigtige timingfunktion! */
 .bouncing {
   animation-name: bouncing;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
   /* animation-timing-function: cubic-bezier(0.57, -0.08, 0.64, 1.91); */
   animation-iteration-count: infinite;
 }
@@ -39,7 +39,7 @@ ved at vælge den rigtige timingfunktion! */
     transform: translate(0, -130%);
   }
   50% {
-    transform: translate(0, 130%);
+    transform: translate(0, 140%);
   }
   100% {
     transform: translate(0, -130%);
@@ -49,3 +49,21 @@ ved at vælge den rigtige timingfunktion! */
 Find den rigtige timingfunktion, 
 og sørg for at animationen kun kører én gang, 
 men bolden bliver liggende. */
+
+.drop {
+  animation-name: drop;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(0, -300%);
+  }
+
+  100% {
+    transform: translate(0, 130%);
+  }
+}
