@@ -249,7 +249,7 @@ og når du har de ønskede ende-værdier, så sæt
 dem ind i animationen. */
 .glow {
   animation-name: glow;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -262,6 +262,7 @@ dem ind i animationen. */
   100% {
     transform: translate(0, 0%);
     filter: drop-shadow(0px 0px 10px yellow);
-    /* filter: drop-shadow(h-shadow v-shadow blur color) */
+    /* filter: drop-shadow(h-shadow v-shadow blur color)
+    how to make it bigger? */
   }
 }
