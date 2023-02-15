@@ -98,3 +98,23 @@ umuligt at få en naturlig bevægelse. */
     transform: translate(0, -150%);
   }
 }
+
+/* animation 5: zoom out:
+Prøv også om du kan få bolden til 
+at forblive helt lille, så der ikke loopes. */
+.zoom_out {
+  animation-name: zoom_out;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom_out {
+  0% {
+    transform: translate(0, 0%);
+  }
+  100% {
+    transform: translate(0, 0%) scale(0.1);
+  }
+}
