@@ -141,4 +141,26 @@ Prøv evt forskellige browsere! */
   }
 }
 
-/*  */
+/* animation 7: fade out
+Bolden fader langsomt ud, og forsvinder helt. 
+Sørg for at den forbliver skjult.
+Denne, og den næste, animation virker kun lige 
+når browseren loader, så reload for at teste! */
+.fade_out {
+  animation-name: fade_out;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade_out {
+  0% {
+    transform: translate(0, 0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0%);
+    opacity: 0;
+  }
+}
