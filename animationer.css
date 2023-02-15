@@ -212,4 +212,24 @@ Bolden drejer rundt om sig selv i en evighed.
   }
 }
 
-/*  */
+/* animation 10: rotation ii
+Bolden drejer nu rundt om et punkt (langt) 
+uden for sig selv. Du skal kigge på hvordan
+ du ændrer centrum for en transform. */
+
+.rotation2 {
+  animation-name: rotation2;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+
+@keyframes rotation2 {
+  0% {
+    transform: rotate(0deg) translate(140%);
+  }
+  100% {
+    transform: rotate(360deg) translate(140%);
+  }
+}
