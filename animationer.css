@@ -1,19 +1,51 @@
+/* .animation {
+    background-color: blue;
+} */
+
 /* Animation 1: Falling
    Bolden falder konstant fra oven. */
 .falling {
-    animation-name: falling;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  animation-name: falling;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes falling {
-    0% {
-        transform: translate(0,-300%);
-    }
+  0% {
+    transform: translate(0, -300%);
+  }
 
-    100% {
-        transform: translate(0,300%);
-    }
-    
+  100% {
+    transform: translate(0, 300%);
+  }
 }
+
+/* Animation 2: Bouncing:
+Bolden starter fra oven, rammer jorden, 
+og hopper op igen. I en uendelighed.
+Få det til at se så naturligt ud som muligt,
+ved at vælge den rigtige timingfunktion! */
+.bouncing {
+  animation-name: bouncing;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  /* animation-timing-function: cubic-bezier(0.57, -0.08, 0.64, 1.91); */
+  animation-iteration-count: infinite;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translate(0, -130%);
+  }
+  50% {
+    transform: translate(0, 130%);
+  }
+  100% {
+    transform: translate(0, -130%);
+  }
+}
+/* animation 3: Drop:
+Find den rigtige timingfunktion, 
+og sørg for at animationen kun kører én gang, 
+men bolden bliver liggende. */
