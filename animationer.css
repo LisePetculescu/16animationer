@@ -118,3 +118,27 @@ at forblive helt lille, så der ikke loopes. */
     transform: translate(0, 0%) scale(0.1);
   }
 }
+
+/* animation 6: zoom in:
+Prøv også om du kan få den til at forblive stor, 
+så der ikke loopes. Undersøg hvad der skal til 
+for at den ikke pixelerer. 
+Prøv evt forskellige browsere! */
+.zoom_in {
+  animation-name: zoom_in;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom_in {
+  0% {
+    transform: translate(0, 0%);
+  }
+  100% {
+    transform: translate(0, 0%) scale(10);
+  }
+}
+
+/*  */
