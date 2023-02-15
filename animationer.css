@@ -64,7 +64,7 @@ men bolden bliver liggende. */
   }
 
   100% {
-    transform: translate(0, 130%);
+    transform: translate(0, 150%);
   }
 }
 
@@ -187,3 +187,29 @@ når browseren loader, så reload for at teste! */
     opacity: 1;
   }
 }
+
+/* animation 9: rotation:
+Bolden drejer rundt om sig selv i en evighed.
+ Sørg for at den drejer jævnt rundt, 
+ og ikke speeder op og ned. */
+.rotation {
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /* unødvendigt i dette tilfælde: transform-origin: center; */
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(0, 0%);
+  }
+  /* hvis rotate er i 0%/from roterer den
+    counterclockwise, og når den er i 100%/to roterer den
+    clockwise */
+  100% {
+    transform: translate(0, 0%) rotate(360deg);
+  }
+}
+
+/*  */
