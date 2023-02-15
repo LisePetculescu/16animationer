@@ -164,3 +164,26 @@ når browseren loader, så reload for at teste! */
     opacity: 0;
   }
 }
+
+/* animation 8: fade in
+Bolden fader langsomt ind, og forbliver på skærmen 
+resten af tiden. animation virker kun lige 
+når browseren loader, så reload for at teste! */
+.fade_in {
+  animation-name: fade_in;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade_in {
+  0% {
+    transform: translate(0, 0%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0%);
+    opacity: 1;
+  }
+}
