@@ -76,8 +76,8 @@ på boksens sider. Det kan godt vise sig lidt
 umuligt at få en naturlig bevægelse. */
 .pattern {
   animation-name: pattern;
-  animation-duration: 5s;
-  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
@@ -112,10 +112,10 @@ at forblive helt lille, så der ikke loopes. */
 
 @keyframes zoom_out {
   0% {
-    transform: translate(0, 0%);
+    transform: scale(1);
   }
   100% {
-    transform: translate(0, 0%) scale(0.1);
+    transform: scale(0);
   }
 }
 
@@ -130,14 +130,15 @@ Prøv evt forskellige browsere! */
   animation-timing-function: linear;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  image-rendering: smooth;
 }
 
 @keyframes zoom_in {
   0% {
-    transform: translate(0, 0%);
+    transform: scale(1);
   }
   100% {
-    transform: translate(0, 0%) scale(10);
+    transform: scale(10);
   }
 }
 
@@ -202,13 +203,13 @@ Bolden drejer rundt om sig selv i en evighed.
 
 @keyframes rotation {
   0% {
-    transform: translate(0, 0%);
+    transform: rotate(0deg);
   }
   /* hvis rotate er i 0%/from roterer den
     counterclockwise, og når den er i 100%/to roterer den
     clockwise */
   100% {
-    transform: translate(0, 0%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -222,7 +223,7 @@ uden for sig selv. Du skal kigge på hvordan
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  transform-origin: center;
+  /* transform-origin: center; */
 }
 
 @keyframes rotation2 {
